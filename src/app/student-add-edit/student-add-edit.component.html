@@ -1,0 +1,56 @@
+<div mat-dialog-title>
+<h1>STUDENT REGISTRATION FORM</h1></div>
+<form [formGroup]="studentform" (ngSubmit)="onformSubmit()">
+<div mat-dialog-content class="content">
+   <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" placeholder="Type your name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" placeholder="Type your name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>E-Mail</mat-label>
+            <input matInput type="text" placeholder="Type your mail-id" formControlName="email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+                <mat-label><b>Gender</b></mat-label>
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+                <mat-radio-button value="Others">Others</mat-radio-button>
+              </mat-radio-group>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Education</mat-label>
+                <mat-select formControlName="education">
+                <mat-option *ngFor="let val of education" [value]="val" >
+                 {{val}}
+                </mat-option></mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" >
+                <mat-label>marks</mat-label>
+                <input matInput type="text" placeholder="Type your marks" formControlName="marks">
+              </mat-form-field>
+        </div>
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button color="primary" style="background-color: #880712;">Cancel</button>
+    <button mat-raised-button color="primary" style="background-color: #0a470f;" type="submit">Save</button>
+</div>
+</form> 

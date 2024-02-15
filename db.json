@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    },
+    {
+      "id": "2",
+      "title": "another title"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "student": [
+    {
+      "firstName": "Soniya",
+      "lastName": "dg",
+      "email": "as@gmail.com",
+      "dob": "2024-01-10T18:30:00.000Z",
+      "gender": "Female",
+      "education": "Post Graduate",
+      "marks": "67",
+      "id": "2a43"
+    },
+    {
+      "id": "deca",
+      "firstName": "fg",
+      "lastName": "sugu",
+      "email": "as@gmail.com",
+      "dob": "2024-01-02T18:30:00.000Z",
+      "gender": "Female",
+      "education": "Diploma",
+      "marks": "dfg"
+    },
+    {
+      "id": "43fe",
+      "firstName": "raju",
+      "lastName": "jeevan",
+      "email": "xxx@gmail.com",
+      "dob": "2024-01-16T18:30:00.000Z",
+      "gender": "Female",
+      "education": "Post Graduate",
+      "marks": "78"
+    }
+  ]
+}
